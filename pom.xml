@@ -65,7 +65,7 @@
 		<dependency>
 			<groupId>org.activiti</groupId>
 			<artifactId>activiti-engine</artifactId>
-			<version>5.10</version>
+			<version>5.15.1</version>
 			<exclusions>
 				<exclusion>
 					<groupId>org.springframework</groupId>
