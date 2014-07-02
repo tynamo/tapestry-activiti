@@ -2,6 +2,7 @@ package org.tynamo.activiti.services;
 
 import org.activiti.engine.*;
 import org.activiti.engine.impl.cfg.StandaloneProcessEngineConfiguration;
+import org.activiti.engine.impl.history.HistoryLevel;
 import org.activiti.engine.impl.interceptor.SessionFactory;
 import org.activiti.engine.impl.variable.EntityManagerSession;
 import org.activiti.engine.repository.Deployment;
@@ -42,7 +43,7 @@ public class ActivitiModule {
 
 		configuration.add(ActivitiSymbols.USE_DEFAULT_SYMBOLS_BASED_CONFIGURER, true);
 
-		configuration.add(ActivitiSymbols.HISTORY, ProcessEngineConfiguration.HISTORY_AUDIT);
+		configuration.add(ActivitiSymbols.HISTORY, HistoryLevel.AUDIT.getKey());
 		configuration.add(ActivitiSymbols.MAIL_SERVER_HOST, "localhost");
 		configuration.add(ActivitiSymbols.MAIL_SERVER_PORT, 25);
 		configuration.add(ActivitiSymbols.MAIL_SERVER_DEFAULT_FROM, "activiti@activiti.org");
